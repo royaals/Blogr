@@ -1,6 +1,6 @@
 
 
-## Blogr- Microblogging Social Media Platform
+## Blogr-Microblogging Social Media Platform
 
 First, run the development server:
 
