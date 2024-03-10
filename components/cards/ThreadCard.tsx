@@ -62,7 +62,7 @@ function ThreadCard({
           <div className='flex w-full flex-col'>
             <Link href={`/profile/${author?.id}`} className='w-fit'>
               <h4 className='cursor-pointer text-base-semibold text-light-1'>
-                {author?.name}
+                {author?.name} 
               </h4>
             </Link>
 
@@ -153,13 +153,7 @@ function ThreadCard({
             {community && ` - ${community.name} Community`}
           </p>
 
-          <Image
-            src={community.image}
-            alt={community.name}
-            width={14}
-            height={14}
-            className='ml-1 rounded-full object-cover'
-          />
+          
         </Link>
       )}
     </article>

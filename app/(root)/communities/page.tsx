@@ -8,6 +8,8 @@ import CommunityCard from "@/components/cards/CommunityCard";
 import { fetchUser } from "@/lib/actions/user.actions";
 import { fetchCommunities } from "@/lib/actions/community.actions";
 
+
+
 async function Page({
   searchParams,
 }: {
@@ -32,6 +34,9 @@ async function Page({
       <div className='mt-5'>
         <Searchbar routeType='communities' />
       </div>
+      <h1 className='mt-9 text-base-semibold text-light-2'>
+        Discover Communities
+      </h1>
 
       <section className='mt-9 flex flex-wrap gap-4'>
         {result.communities.length === 0 ? (

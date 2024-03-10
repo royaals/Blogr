@@ -21,16 +21,16 @@ export function formatDateString(dateString: string) {
   };
 
   const date = new Date(dateString);
-  const formattedDate = date.toLocaleDateString(undefined, options);
+  const formattedDate = date.toLocaleDateString('en-IN', options);
 
-  const time = date.toLocaleTimeString([], {
-    hour: "numeric",
+  const time = date.toLocaleTimeString('en-IN', {
+    hour: "2-digit",
     minute: "2-digit",
+    hour12: false,
   });
 
   return `${time} - ${formattedDate}`;
 }
-
 
 export function formatThreadCount(count: number): string {
   if (count === 0) {
