@@ -41,7 +41,7 @@ function ThreadCard({
 }: Props) {
   return (
     <article
-      className={`flex w-full flex-col rounded-xl ${isComment ? "px-0 xs:px-7" : "bg-dark-2 p-7"
+      className={`flex w-full flex-col rounded-xl no-focus border border-dark-4 ${isComment ? "px-0 xs:px-7" : "bg-dark-2 p-7"
         }`}
     >
       <div className='flex items-start justify-between'>
@@ -62,7 +62,7 @@ function ThreadCard({
           <div className='flex w-full flex-col'>
             <Link href={`/profile/${author?.id}`} className='w-fit'>
               <h4 className='cursor-pointer text-base-semibold text-light-1'>
-                {author?.name} 
+                {author?.name}
               </h4>
             </Link>
 
@@ -153,7 +153,7 @@ function ThreadCard({
             {community && ` - ${community.name} Community`}
           </p>
 
-          
+
         </Link>
       )}
     </article>
