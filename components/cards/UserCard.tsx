@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-
+import styles from "./../../app/styles.module.css";
 
 
 interface Props {
@@ -19,8 +19,8 @@ function UserCard({ id, name, username, imgUrl, personType }: Props) {
   const isCommunity = personType === "Community";
 
   return (
-    <article className='user-card'>
-      <div className='user-card_avatar'>
+<article className={`user-card `}>
+      <div className={`user-card_avatar ${styles.link} `}>
         <div className='relative h-12 w-12' onClick={() => {
           if (isCommunity) {
             router.push(`/communities/${id}`);

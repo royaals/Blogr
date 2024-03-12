@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { SignOutButton, SignedIn, useAuth } from "@clerk/nextjs";
-import styles from "./../../app/styles.module.css";
+
 import { sidebarLinks } from "@/constants";
 
 const LeftSidebar = () => {
@@ -27,7 +27,7 @@ const LeftSidebar = () => {
             <Link
               href={link.route}
               key={link.label}
-              className={`leftsidebar_link ${styles.link} ${isActive ? "bg-primary-500 active" : ""}`}
+              className={`leftsidebar_link ${isActive ? "bg-primary-500 active": " "}`}
             >
               <Image
                 src={link.imgURL}

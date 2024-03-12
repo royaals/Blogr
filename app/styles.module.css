@@ -21,4 +21,8 @@
   .link.active:hover {
     background-color: #2ea9cf; /* original color of active link */;
   }
+  .link {
+    border-radius: 10px; /* Adjust as needed */
+    padding: 3px; /* Adjust as needed */
+  }
   
