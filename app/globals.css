@@ -23,8 +23,11 @@
     .no-result {
         @apply text-center !text-base-regular text-light-3;
     }
+   
+    .icon:hover .heart {
+        fill: red;
+      }
 
-  
     .community-card {
         @apply w-full rounded-lg bg-dark-1 px-4 py-5 sm:w-96;
     }

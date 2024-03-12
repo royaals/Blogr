@@ -1,9 +1,10 @@
+
 import Image from "next/image";
 import Link from "next/link";
 
 import { formatDateString } from "@/lib/utils";
 import DeleteThread from "../forms/DeleteThread";
-
+import styles from "./../../app/styles.module.css";
 interface Props {
   id: string;
   currentUserId: string;
@@ -69,13 +70,14 @@ function ThreadCard({
             <p className='mt-2 text-small-regular text-light-2'>{content}</p>
 
             <div className={`${isComment && "mb-10"} mt-5 flex flex-col gap-3`}>
-              <div className='flex gap-3.5'>
+
+              <div className={`flex gap-3.5 ${styles.icon}`}>
                 <Image
                   src='/assets/heart-gray.svg'
                   alt='heart'
                   width={24}
                   height={24}
-                  className='cursor-pointer object-contain'
+                  className={`cursor-pointer object-contain ${styles.heart}`}
                 />
                 <Link href={`/thread/${id}`}>
                   <Image
@@ -83,7 +85,7 @@ function ThreadCard({
                     alt='reply'
                     width={24}
                     height={24}
-                    className='cursor-pointer object-contain'
+                    className={`cursor-pointer object-contain ${styles.reply}`}
                   />
                 </Link>
                 <Image
@@ -91,14 +93,15 @@ function ThreadCard({
                   alt='repost'
                   width={24}
                   height={24}
-                  className='cursor-pointer object-contain'
+                  className={`cursor-pointer object-contain ${styles.repost}`}
                 />
+
                 <Image
                   src='/assets/share.svg'
                   alt='share'
                   width={24}
                   height={24}
-                  className='cursor-pointer object-contain'
+                  className={`cursor-pointer object-contain ${styles.share}`}
                 />
               </div>
 

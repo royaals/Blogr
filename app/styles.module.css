@@ -1,0 +1,24 @@
+/* styles.module.css */
+
+  .icon:hover .heart {
+    fill: red;
+  }
+  .icon:hover .reply {
+    fill: blue;
+  }
+  .icon:hover .repost {
+    fill: green;
+  }
+  .icon:hover .share {
+    fill: purple;
+  }
+  
+ /* styles.module.css */
+
+  .link:hover {
+    background-color: #101012;
+  }
+  .link.active:hover {
+    background-color: #2ea9cf; /* original color of active link */;
+  }
+  
