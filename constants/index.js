@@ -14,11 +14,7 @@ export const sidebarLinks = [
     route: "/notifications",
     label: "Notifications",
   },
-  {
-    imgURL: "/assets/create.svg",
-    route: "/create-thread",
-    label: "Post",
-  },
+ 
   {
     imgURL: "/assets/community.svg",
     route: "/communities",
@@ -28,6 +24,12 @@ export const sidebarLinks = [
     imgURL: "/assets/user.svg",
     route: "/profile",
     label: "Profile",
+  },
+  {
+    imgURL: "/assets/create.svg",
+    route: "/create-thread",
+    label: "Post",
+
   },
 ];
 
