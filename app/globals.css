@@ -4,29 +4,29 @@
 
 @layer components {
 
-    
+
     .main-container {
         @apply flex min-h-screen flex-1 flex-col items-center bg-dark-1 px-6 pb-10 pt-28 max-md:pb-32 sm:px-10;
     }
 
-    
+
     .head-text {
         @apply text-heading2-bold text-light-1;
     }
 
-   
+
     .activity-card {
         @apply flex items-center gap-2 rounded-md bg-dark-2 px-7 py-4;
     }
 
-   
+
     .no-result {
         @apply text-center !text-base-regular text-light-3;
     }
-   
+
     .icon:hover .heart {
         fill: red;
-      }
+    }
 
     .community-card {
         @apply w-full rounded-lg bg-dark-1 px-4 py-5 sm:w-96;
@@ -36,12 +36,12 @@
         @apply rounded-lg bg-primary-500 px-5 py-1.5 text-small-regular !text-light-1 !important;
     }
 
-   
+
     .thread-card_bar {
         @apply relative mt-2 w-0.5 grow rounded-full bg-neutral-800;
     }
 
-    
+
     .user-card {
         @apply flex flex-col justify-between gap-4 max-xs:rounded-xl max-xs:bg-dark-3 max-xs:p-4 xs:flex-row xs:items-center;
     }
@@ -63,8 +63,23 @@
     }
 
     .topbar {
-        @apply fixed top-0 z-30 flex w-full items-center justify-between bg-dark-2 px-6 py-3;
+        @apply fixed top-0 z-30 flex w-full items-center justify-between px-6 py-3;
     }
+    
+    
+    @media (min-width: 768px) {
+        .topbar {
+            @apply bg-dark-2;
+        }
+    }
+    
+    
+    @media (max-width: 767px) {
+        .topbar {
+            @apply bg-none bg-glassmorphism backdrop-blur-lg;
+        }
+    }
+    
 
     .bottombar {
         @apply fixed bottom-0 z-10 w-full rounded-t-3xl bg-glassmorphism p-4 backdrop-blur-lg xs:px-7 md:hidden;
