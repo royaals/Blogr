@@ -79,15 +79,15 @@ function ThreadCard({
                   height={24}
                   className={`cursor-pointer object-contain ${styles['heart-icon']}`}
                 />
-
-
-                <Image
+                <Link href={`/thread/${id}`}> <Image
                   src='/assets/reply.svg'
                   alt='reply'
                   width={24}
                   height={24}
                   className={`cursor-pointer object-contain ${styles['reply-icon']}`}
-                />
+                /></Link>
+
+
 
                 <Image
                   src='/assets/repost.svg'
