@@ -71,38 +71,41 @@ function ThreadCard({
 
             <div className={`${isComment && "mb-10"} mt-5 flex flex-col gap-3`}>
 
-              <div className={`flex gap-3.5 ${styles.icon}`}>
+              <div className={`flex gap-3.5 `}>
                 <Image
                   src='/assets/heart-gray.svg'
                   alt='heart'
                   width={24}
                   height={24}
-                  className={`cursor-pointer object-contain ${styles.heart}`}
+                  className={`cursor-pointer object-contain ${styles['heart-icon']}`}
                 />
-                <Link href={`/thread/${id}`}>
-                  <Image
-                    src='/assets/reply.svg'
-                    alt='reply'
-                    width={24}
-                    height={24}
-                    className={`cursor-pointer object-contain ${styles.reply}`}
-                  />
-                </Link>
+
+
+                <Image
+                  src='/assets/reply.svg'
+                  alt='reply'
+                  width={24}
+                  height={24}
+                  className={`cursor-pointer object-contain ${styles['reply-icon']}`}
+                />
+
                 <Image
                   src='/assets/repost.svg'
                   alt='repost'
                   width={24}
                   height={24}
-                  className={`cursor-pointer object-contain ${styles.repost}`}
+                  className={`cursor-pointer object-contain ${styles['repost-icon']}`}
                 />
+
 
                 <Image
                   src='/assets/share.svg'
                   alt='share'
                   width={24}
                   height={24}
-                  className={`cursor-pointer object-contain ${styles.share}`}
+                  className={`cursor-pointer object-contain ${styles['share-icon']}`}
                 />
+
               </div>
 
               {isComment && comments.length > 0 && (

@@ -1,42 +1,49 @@
 /* styles.module.css */
 
-  .icon:hover .heart {
-    fill: red;
-  }
-  .icon:hover .reply {
-    fill: blue;
-  }
-  .icon:hover .repost {
-    fill: green;
-  }
-  .icon:hover .share {
-    fill: purple;
-  }
-  
- /* styles.module.css */
+.link:hover {
+  background-color: #101012;
+}
 
-  .link:hover {
-    background-color: #101012;
-  }
-  .link.active:hover {
-    background-color: #2ea9cf; /* original color of active link */;
-  }
-  .link {
-    border-radius: 10px; /* Adjust as needed */
-    padding: 3px; /* Adjust as needed */
-  }
-  
-  .button {
-    background-color: #2ea9cf;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    border-radius: 12px;
-    border: none;
-  }
-  
+.link.active:hover {
+  background-color: #2ea9cf;
+  /* original color of active link */
+  ;
+}
+
+.link {
+  border-radius: 10px;
+  /* Adjust as needed */
+  padding: 3px;
+  /* Adjust as needed */
+}
+
+.button {
+  background-color: #2ea9cf;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 12px;
+  border: none;
+}
+
+.heart-icon:hover {
+  filter: brightness(0) saturate(100%) invert(20%) sepia(100%) saturate(6700%) hue-rotate(360deg) brightness(90%) contrast(91%);
+}
+
+.reply-icon:hover {
+  filter: brightness(0) saturate(100%) invert(27%) sepia(54%) saturate(4099%) hue-rotate(201deg) brightness(99%) contrast(91%);
+}
+
+
+.repost-icon:hover {
+  filter: brightness(0) saturate(100%) invert(34%) sepia(84%) saturate(3490%) hue-rotate(123deg) brightness(92%) contrast(88%);
+}
+
+.share-icon:hover {
+  filter: brightness(0) saturate(100%) invert(38%) sepia(57%) saturate(3950%) hue-rotate(277deg) brightness(92%) contrast(91%);
+}
