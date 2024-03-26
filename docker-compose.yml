@@ -1,0 +1,23 @@
+version: '3.8'
+services:
+  app:
+    build:
+      context: ./client # Ensure this is the correct path to your Dockerfile
+      dockerfile: Dockerfile
+    ports:
+      - '3000:3000'
+    volumes:
+      - .:/app
+      - /app/node_modules
+    command: npm run dev
+    environment:
+      - NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=
+      - CLERK_SECRET_KEY=
+      - NEXT_PUBLIC_CLERK_SIGN_IN_URL=/sign-in
+      - NEXT_PUBLIC_CLERK_SIGN_UP_URL=/sign-up
+      - NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL=/
+      - NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL=/onboarding
+      - MONGODB_URL=
+      - UPLOADTHING_SECRET=
+      - UPLOADTHING_APP_ID=
+      - NEXT_CLERK_WEBHOOK_SECRET=
