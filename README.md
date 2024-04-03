@@ -37,7 +37,7 @@ Sure, here's a README.md file for your Blogr project with the development setup 
 ## Development Setup
 
 1. Clone the repository:
-   ```
+   ```bash
    git clone https://github.com/royaals/Blogr.git
    ```
 2. Navigate into the directory:
