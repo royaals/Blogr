@@ -28,13 +28,6 @@ Blogr is a feature-rich social media application that supports user interaction,
 
 ## Development Setup
 
-1. Clone the repository:
-Sure, here's a README.md file for your Blogr project with the development setup and hosted link section:
-
-```
-
-
-## Development Setup
 
 1. Clone the repository:
    ```bash
@@ -42,15 +35,15 @@ Sure, here's a README.md file for your Blogr project with the development setup 
    ```
 2. Navigate into the directory:
    
-   ```
+   ```bash
    cd blogr
    ```
 3. Install the dependencies:
-   ```
+   ```bash
    npm install
    ```
 4. Start the development server:
-   ```
+   ```bash
    npm run dev
    ```
 
