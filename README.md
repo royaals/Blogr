@@ -33,16 +33,18 @@ The Blogr application is a comprehensive social media platform that fosters user
    ```bash
    git clone https://github.com/royaals/Blogr.git
    ```
-2. Navigate into the directory:
+2. Set up your .env.local file
+   
+3. Navigate into the directory:
    
    ```bash
    cd blogr
    ```
-3. Install the dependencies:
+4. Install the dependencies:
    ```bash
    npm install
    ```
-4. Start the development server:
+5. Start the development server:
    ```bash
    npm run dev
    ```
