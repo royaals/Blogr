@@ -1,4 +1,4 @@
-require('./polyfills.js')
+
 
 
 /** @type {import('next').NextConfig} */
