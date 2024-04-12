@@ -47,7 +47,7 @@ Blogr is a feature-rich social media application that supports user interaction,
    npm run dev
    ```
 
-## Hosted Link
+## Hosted Webapp Link
 
 https://blogr-bice.vercel.app/
 
