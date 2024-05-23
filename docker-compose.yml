@@ -2,7 +2,7 @@ version: '3.8'
 services:
   app:
     build:
-      context: ./client # Ensure this is the correct path to your Dockerfile
+      context: ./client
       dockerfile: Dockerfile
     ports:
       - '3000:3000'
