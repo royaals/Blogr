@@ -42,9 +42,9 @@ Blogr is a feature-rich social media application that supports user interaction,
    ```bash
    npm install
    ```
-4. Rename the `.env.example` file to `.env.local`:   
+4. copy the `.env.example` file to `.env.local`:   
    ```bash
-   mv .env.example .env.local
+   cp .env.example .env.local
    ```
 5. Insert your credentials into the environment variables in the `.env.local` file.
 
@@ -52,6 +52,30 @@ Blogr is a feature-rich social media application that supports user interaction,
    ```bash
    npm run dev
    ```
+### Using Docker for Local Development
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/royaals/Blogr.git
+
+2. Navigate into the directory:
+   
+   ```bash
+   cd blogr
+   ```
+3. Install the dependencies:
+   ```bash
+   npm install
+   ```
+   
+4. Insert your credentials into the environment variables in the `docker-compose.yml` file.   
+
+5. Run the Docker Compose command to start the development server:
+   ```bash
+   docker-compose up --build
+   ```
+
+
 
 
 
