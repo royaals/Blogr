@@ -42,7 +42,13 @@ Blogr is a feature-rich social media application that supports user interaction,
    ```bash
    npm install
    ```
-4. Start the development server:
+4. Rename the `.env.example` file to `.env.local`:   
+   ```bash
+   mv .env.example .env.local
+   ```
+5. Insert your credentials into the environment variables in the `.env.local` file.
+
+6. Start the development server:
    ```bash
    npm run dev
    ```
