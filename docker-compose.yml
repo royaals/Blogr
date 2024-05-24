@@ -1,23 +1,30 @@
 version: '3.8'
+
 services:
-  app:
+  blogr:
     build:
-      context: ./client
+      context: .
       dockerfile: Dockerfile
     ports:
-      - '3000:3000'
-    volumes:
-      - .:/app
-      - /app/node_modules
-    command: npm run dev
+      - "3000:3000"
     environment:
-      - NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=
-      - CLERK_SECRET_KEY=
-      - NEXT_PUBLIC_CLERK_SIGN_IN_URL=/sign-in
-      - NEXT_PUBLIC_CLERK_SIGN_UP_URL=/sign-up
-      - NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL=/
-      - NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL=/onboarding
-      - MONGODB_URL=
-      - UPLOADTHING_SECRET=
-      - UPLOADTHING_APP_ID=
-      - NEXT_CLERK_WEBHOOK_SECRET=
+      NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY: ""
+      CLERK_SECRET_KEY: ""
+      NEXT_PUBLIC_CLERK_SIGN_IN_URL: "/sign-in"
+      NEXT_PUBLIC_CLERK_SIGN_UP_URL: "/sign-up"
+      NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL: "/"
+      NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL: "/onboarding"
+      MONGODB_URL: "mongodb://mongo:27017/blogr"
+      UPLOADTHING_SECRET: ""
+      UPLOADTHING_APP_ID: ""
+      NEXT_CLERK_WEBHOOK_SECRET: ""
+
+  mongo:
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+
+volumes:
+  mongo-data:
