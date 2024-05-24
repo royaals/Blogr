@@ -213,6 +213,12 @@ module.exports = {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
+      fontSize: {
+        '3xl': '1.875rem',
+        '6xl': '4rem', 
+        '7xl': '5rem',
+        'xl': '1.25rem',
+      }
     },
   },
   plugins: [require("tailwindcss-animate")],

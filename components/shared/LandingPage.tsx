@@ -1,7 +1,7 @@
 
 import Link from "next/link"
 
-export default function Component() {
+export default function LandingPage() {
   return (
     <div className="flex flex-col min-h-[100dvh] bg-gray-950 text-gray-50">
       <header className="px-4 lg:px-6 h-14 flex items-center">
@@ -10,17 +10,15 @@ export default function Component() {
           <span className="sr-only">Blogr</span>
         </Link>
         <nav className="ml-auto flex gap-4 sm:gap-6">
-          <Link className="text-sm font-medium hover:underline underline-offset-4" href="#">
+          <Link className="text-sm font-medium hover:underline underline-offset-4" href="#features">
             Features
           </Link>
-          <Link className="text-sm font-medium hover:underline underline-offset-4" href="#">
-            Pricing
+         
+          <Link className="text-sm font-medium hover:underline underline-offset-4" href="/sign-in">
+            login
           </Link>
-          <Link className="text-sm font-medium hover:underline underline-offset-4" href="#">
-            About
-          </Link>
-          <Link className="text-sm font-medium hover:underline underline-offset-4" href="#">
-            Contact
+          <Link className="text-sm font-medium hover:underline underline-offset-4" href="/sign-up">
+            sign up
           </Link>
         </nav>
       </header>
@@ -30,10 +28,10 @@ export default function Component() {
             <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
               <div className="flex flex-col justify-center space-y-4">
                 <div className="space-y-2">
-                  <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
+                  <h1 className="text-5xl  font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
                     Unleash Your Creativity with Blogr
                   </h1>
-                  <p className="max-w-[600px] text-gray-300 md:text-xl">
+                  <p className="max-w-[600px] text-gray-300 md:text-xl ">
                     Blogr is a powerful social media platform that empowers you to create, connect, and engage with a
                     vibrant community. Explore our core features and discover how Blogr can transform your online
                     presence.
@@ -42,16 +40,11 @@ export default function Component() {
                 <div className="flex flex-col gap-2 min-[400px]:flex-row">
                   <Link
                     className="inline-flex h-10 items-center justify-center rounded-md bg-gray-50 px-8 text-sm font-medium text-[#5b21b6] shadow transition-colors hover:bg-gray-200 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#5b21b6] disabled:pointer-events-none disabled:opacity-50"
-                    href="#"
+                    href="/sign-in"
                   >
                     Get Started
                   </Link>
-                  <Link
-                    className="inline-flex h-10 items-center justify-center rounded-md border border-gray-200 bg-transparent px-8 text-sm font-medium shadow-sm transition-colors hover:bg-gray-800 hover:text-gray-50 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#5b21b6] disabled:pointer-events-none disabled:opacity-50"
-                    href="#"
-                  >
-                    Learn More
-                  </Link>
+                  
                 </div>
               </div>
               <img
@@ -64,7 +57,7 @@ export default function Component() {
             </div>
           </div>
         </section>
-        <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-950">
+        <section id="features" className="w-full py-12 md:py-24 lg:py-32 bg-gray-950">
           <div className="container px-4 md:px-6">
             <div className="grid gap-12 lg:grid-cols-2">
               <div className="flex flex-col items-start space-y-4">
@@ -145,7 +138,7 @@ export default function Component() {
     </div>
   )
 }
-
+//@ts-ignore
 function ContactIcon(props) {
   return (
     <svg
@@ -169,7 +162,7 @@ function ContactIcon(props) {
   )
 }
 
-
+//@ts-ignore
 function InstagramIcon(props) {
   return (
     <svg
@@ -191,7 +184,7 @@ function InstagramIcon(props) {
   )
 }
 
-
+//@ts-ignore
 function PencilIcon(props) {
   return (
     <svg
@@ -212,7 +205,7 @@ function PencilIcon(props) {
   )
 }
 
-
+//@ts-ignore
 function SearchIcon(props) {
   return (
     <svg
@@ -233,7 +226,7 @@ function SearchIcon(props) {
   )
 }
 
-
+//@ts-ignore
 function UserIcon(props) {
   return (
     <svg
@@ -254,7 +247,7 @@ function UserIcon(props) {
   )
 }
 
-
+//@ts-ignore
 function UsersIcon(props) {
   return (
     <svg
