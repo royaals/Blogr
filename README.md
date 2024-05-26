@@ -33,22 +33,18 @@ Blogr is a feature-rich social media application that supports user interaction,
    ```bash
    git clone https://github.com/royaals/Blogr.git
    ```
-2. Navigate into the directory:
-   
-   ```bash
-   cd blogr
-   ```
-3. Install the dependencies:
+
+2. Install the dependencies:
    ```bash
    npm install
    ```
-4. copy the `.env.example` file to `.env.local`:   
+3. copy the `.env.example` file to `.env.local`:   
    ```bash
    cp .env.example .env.local
    ```
-5. Insert your credentials into the environment variables in the `.env.local` file.
+4. Insert your credentials into the environment variables in the `.env.local` file.
 
-6. Start the development server:
+5. Start the development server:
    ```bash
    npm run dev
    ```
@@ -58,19 +54,15 @@ Blogr is a feature-rich social media application that supports user interaction,
    ```bash
    git clone https://github.com/royaals/Blogr.git
 
-2. Navigate into the directory:
-   
-   ```bash
-   cd blogr
-   ```
-3. Install the dependencies:
+
+2. Install the dependencies:
    ```bash
    npm install
    ```
    
-4. Insert your credentials into the environment variables in the `docker-compose.yml` file.   
+3. Insert your credentials into the environment variables in the `docker-compose.yml` file.   
 
-5. Run the Docker Compose command to start the development server:
+4. Run the Docker Compose command to start the development server:
    ```bash
    docker-compose up --build
    ```
