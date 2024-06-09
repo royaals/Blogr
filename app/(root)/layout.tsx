@@ -1,5 +1,5 @@
 import React from "react";
-import type { Metadata } from "next";
+
 import { Inter } from "next/font/google";
 import { ClerkProvider } from "@clerk/nextjs";
 import { dark } from "@clerk/themes";
@@ -12,7 +12,7 @@ import Topbar from "@/components/shared/Topbar";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata: Metadata = {
+export const metadata ={
   title: "Blogr",
   description: "A Blogs application",
 };
@@ -29,6 +29,11 @@ export default function RootLayout({
       }}
     >
       <html lang='en'>
+      <head>
+        <link rel="icon" href="/assets/favicon.ico" />
+        <title>{metadata.title}</title>
+        <meta name="description" content={metadata.description} />
+      </head>
         <body className={inter.className}>
           <Topbar />
 

@@ -40,7 +40,7 @@ export default function LandingPage() {
                 <div className="flex flex-col gap-2 min-[400px]:flex-row">
                   <Link
                     className="inline-flex h-10 items-center justify-center rounded-md bg-gray-950 px-8 text-sm font-medium text-white shadow transition-colors  text-extrabold disabled:pointer-events-none disabled:opacity-50"
-                    href="/sign-in"
+                    href="/sign-up"
                   >
                     Get Started
                   </Link>
@@ -51,7 +51,7 @@ export default function LandingPage() {
                 alt="Hero"
                 className="mx-auto aspect-video overflow-hidden rounded-xl object-cover sm:w-full lg:order-last lg:aspect-square"
                 height="550"
-                src="/placeholder.svg"
+                src="/assets/heroimage.png"
                 width="550"
               />
             </div>

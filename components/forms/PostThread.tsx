@@ -56,7 +56,7 @@ function PostThread({ userId }: Props) {
       });
     }
 
-    router.push("/");
+    router.push("/home");
   };
 
   return (

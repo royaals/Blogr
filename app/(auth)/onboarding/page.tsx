@@ -9,7 +9,7 @@ async function Page() {
   if (!user) return null; 
 
   const userInfo = await fetchUser(user.id);
-  if (userInfo?.onboarded) redirect("/");
+  if (userInfo?.onboarded) redirect("/home");
 
   const userData = {
     id: user.id,

@@ -35,7 +35,7 @@ function DeleteThread({
       onClick={async () => {
         await deleteThread(JSON.parse(threadId), pathname);
         if (!parentId || !isComment) {
-          router.push("/");
+          router.push("/home");
         }
       }}
     />
