@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: blogr
+  labels:
+    app: blogr
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: blogr
+  template:
+    metadata:
+      labels:
+        app: blogr
+    spec:
+      containers:
+      - name: payzen
+        image: image_name:linux
+        ports:
+        - containerPort: 3000
+          protocol: TCP
+        env:
+        - name: DATABASE_URL
+          value: "Replace with your Cloud PostgreSQL Database URL"
+        resources:
+          requests:
+            memory: "100Mi"
+            cpu: "100m"
+          limits:
+            memory: "500Mi"
+            cpu: "500m"
+
