@@ -24,6 +24,7 @@ Blogr is a feature-rich social media application that supports user interaction,
 - MongoDB
 - Uploadthing
 - React Hook Form
+- Docker
 - Kubernetes
 
 
