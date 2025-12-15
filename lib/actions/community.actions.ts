@@ -14,16 +14,16 @@ export async function createCommunity(
   username: string,
   image: string,
   bio: string,
-  createdById: string // Change the parameter name to reflect it's an id
+  createdById: string 
 ) {
   try {
     connectToDB();
 
-    // Find the user with the provided unique id
+   
     const user = await User.findOne({ id: createdById });
 
     if (!user) {
-      throw new Error("User not found"); // Handle the case if the user with the id is not found
+      throw new Error("User not found"); 
     }
 
     const newCommunity = new Community({
@@ -32,18 +32,18 @@ export async function createCommunity(
       username,
       image,
       bio,
-      createdBy: user._id, // Use the mongoose ID of the user
+      createdBy: user._id, 
     });
 
     const createdCommunity = await newCommunity.save();
 
-    // Update User model
+    
     user.communities.push(createdCommunity._id);
     await user.save();
 
     return createdCommunity;
   } catch (error) {
-    // Handle any errors
+    
     console.error("Error creating community:", error);
     throw error;
   }
@@ -64,7 +64,7 @@ export async function fetchCommunityDetails(id: string) {
 
     return communityDetails;
   } catch (error) {
-    // Handle any errors
+    
     console.error("Error fetching community details:", error);
     throw error;
   }
@@ -81,7 +81,7 @@ export async function fetchCommunityPosts(id: string) {
         {
           path: "author",
           model: User,
-          select: "name image id", // Select the "name" and "_id" fields from the "User" model
+          select: "name image id", 
         },
         {
           path: "children",
@@ -89,7 +89,7 @@ export async function fetchCommunityPosts(id: string) {
           populate: {
             path: "author",
             model: User,
-            select: "image _id", // Select the "name" and "_id" fields from the "User" model
+            select: "image _id", 
           },
         },
       ],
@@ -97,7 +97,7 @@ export async function fetchCommunityPosts(id: string) {
 
     return communityPosts;
   } catch (error) {
-    // Handle any errors
+    
     console.error("Error fetching community posts:", error);
     throw error;
   }
@@ -117,16 +117,16 @@ export async function fetchCommunities({
   try {
     connectToDB();
 
-    // Calculate the number of communities to skip based on the page number and page size.
+   
     const skipAmount = (pageNumber - 1) * pageSize;
 
-    // Create a case-insensitive regular expression for the provided search string.
+   
     const regex = new RegExp(searchString, "i");
 
-    // Create an initial query object to filter communities.
+    
     const query: FilterQuery<typeof Community> = {};
 
-    // If the search string is not empty, add the $or operator to match either username or name fields.
+   
     if (searchString.trim() !== "") {
       query.$or = [
         { username: { $regex: regex } },
@@ -134,22 +134,22 @@ export async function fetchCommunities({
       ];
     }
 
-    // Define the sort options for the fetched communities based on createdAt field and provided sort order.
+    
     const sortOptions = { createdAt: sortBy };
 
-    // Create a query to fetch the communities based on the search and sort criteria.
+   
     const communitiesQuery = Community.find(query)
       .sort(sortOptions)
       .skip(skipAmount)
       .limit(pageSize)
       .populate("members");
 
-    // Count the total number of communities that match the search criteria (without pagination).
+    
     const totalCommunitiesCount = await Community.countDocuments(query);
 
     const communities = await communitiesQuery.exec();
 
-    // Check if there are more communities beyond the current page.
+    
     const isNext = totalCommunitiesCount > skipAmount + communities.length;
 
     return { communities, isNext };
@@ -166,21 +166,21 @@ export async function addMemberToCommunity(
   try {
     connectToDB();
 
-    // Find the community by its unique id
+    
     const community = await Community.findOne({ id: communityId });
 
     if (!community) {
       throw new Error("Community not found");
     }
 
-    // Find the user by their unique id
+    
     const user = await User.findOne({ id: memberId });
 
     if (!user) {
       throw new Error("User not found");
     }
 
-    // Check if the user is already a member of the community
+    
     if (community.members.includes(user._id)) {
       throw new Error("User is already a member of the community");
     }
